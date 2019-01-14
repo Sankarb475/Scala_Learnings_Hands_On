@@ -2,6 +2,9 @@
 
 ./spark-shell --jars /Users/sankar.biswas/Desktop/spark-cassandra-connector_2.11-2.0.10.jar, /Users/dummy.jar2
 
+//Or you can add following configuration in you spark-defaults.conf but remember to remove template from end of spark-defaults
+spark.driver.extraClassPath  pathOfJarsWithCommaSeprated
+
 
 //Higher Order Function => Function which takes a function as input and/or returns a function as output
 
