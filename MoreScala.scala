@@ -1,3 +1,8 @@
+//while running spark-shell if you want to add some external jar so that you can import some functionalities, follow this ::
+
+./spark-shell --jars /Users/sankar.biswas/Desktop/spark-cassandra-connector_2.11-2.0.10.jar, /Users/dummy.jar2
+
+
 //Higher Order Function => Function which takes a function as input and/or returns a function as output
 
 scala> def dumdum : (String => String) = _.toUpperCase
