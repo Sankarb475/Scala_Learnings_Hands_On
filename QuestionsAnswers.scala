@@ -46,8 +46,8 @@ out is not under the scope of foo but init() itself.
 scala> class Employee1(val empId : Int, val empName:String){
      |     println("From Primary Constructor")
      |     def this(){
-     | this(0,null)
-     | println("From Zero-Argument Auxiliary Constructor")
+     |         this(0,null)
+     |         println("From Zero-Argument Auxiliary Constructor")
      |     }
      | }
 defined class Employee1
