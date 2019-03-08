@@ -58,4 +58,17 @@ a: Employee1 = Employee1@12028586
 
 
 ==============================================================================================================================
+2) What does '???' (three question marks) mean in Scala?
+
+==> The syntax of using three question marks in Scala lets you write a not-yet implemented method.
+
+def doSomething(s: String): Int = ???
+
+`???` can be used for marking methods that remain to be implemented.
+
+
+
+
+
+
 
