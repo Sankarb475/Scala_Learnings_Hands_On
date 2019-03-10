@@ -66,9 +66,20 @@ def doSomething(s: String): Int = ???
 
 `???` can be used for marking methods that remain to be implemented.
 
+==============================================================================================================================
+3) how to add jars in scala REPL?
 
+==> if you are already inside Scala REPL, try this :: 
 
+scala> :cp json4s-native_2.12-3.6.0.jar
 
+in general ":cp path/jarName.jar"
+
+While getting into the scala shell ::
+
+scala -cp json4s-native_2.12-3.6.0.jar
+
+Try doing a :help, you will get to see other utilities as well.
 
 
 
