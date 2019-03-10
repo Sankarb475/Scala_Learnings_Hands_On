@@ -81,5 +81,15 @@ scala -cp json4s-native_2.12-3.6.0.jar
 
 Try doing a :help, you will get to see other utilities as well.
 
+==============================================================================================================================
+4) How do you run unix commands through Scala?
 
+==> Using sys.process
+
+scala> import sys.process._
+
+once you have imported the package, just use the unix command you want to run in double quotes and end the command with !
+
+scala> "pwd" !
+scala> "ls -lrt" !
 
