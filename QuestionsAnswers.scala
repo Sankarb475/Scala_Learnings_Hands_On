@@ -93,3 +93,44 @@ once you have imported the package, just use the unix command you want to run in
 scala> "pwd" !
 scala> "ls -lrt" !
 
+==============================================================================================================================
+5) How zip function works in scala?
+
+==> zip function helps you zip two collection together in scala
+
+scala> val women = List("Wilma", "Betty")
+women: List[String] = List(Wilma, Betty)
+
+scala> val men = List("Fred", "Barney")
+men: List[String] = List(Fred, Barney)
+
+scala> val couples = women zip men
+couples: List[(String, String)] = List((Wilma,Fred), (Betty,Barney))
+
+scala> for ((wife, husband) <- couples) {
+     |     println(s"$wife is married to $husband")
+     | }
+Wilma is married to Fred
+Betty is married to Barney
+
+scala> val couplesMap = couples.toMap
+couplesMap: scala.collection.immutable.Map[String,String] = Map(Wilma -> Fred, Betty -> Barney)
+
+
+scala> val a = List(1,2)
+a: List[Int] = List(1, 2)
+
+scala> val b = List("a","b")
+b: List[String] = List(a, b)
+
+scala> val c = a zip b
+c: List[(Int, String)] = List((1,a), (2,b))
+
+scala> val (d,e) = c.unzip
+unzip   unzip3
+
+scala> val (d,e) = c.unzip
+d: List[Int] = List(1, 2)
+e: List[String] = List(a, b)
+
+
