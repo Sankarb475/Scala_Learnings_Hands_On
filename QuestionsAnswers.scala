@@ -133,4 +133,39 @@ scala> val (d,e) = c.unzip
 d: List[Int] = List(1, 2)
 e: List[String] = List(a, b)
 
+==============================================================================================================================
+6) What is companion object in scala and sue of apply() method in Scala with example.
+==>
+companion objects are having same name as the class along which it gets defined in the same script. And apply methods are methods
+which by default gets called.
+
+class ExampleofCompanion 
+{ 
+      
+    // Variables of Companion class 
+    var str1 = "GeeksforGeeks"; 
+    var str2 = "Tutorial of Companion object"; 
+      
+    // Method of Companion class 
+    def show() 
+    { 
+        println(str1); 
+        println(str2); 
+    } 
+} 
+
+object ExampleofCompanion 
+{ 
+    def apply(): Unit  =
+    { 
+        println("Inside")
+        var obj = new ExampleofCompanion(); 
+        obj.show(); 
+    } 
+} 
+
+ExampleofCompanion() //apply method has been triggered by itself
+
+
+
 
