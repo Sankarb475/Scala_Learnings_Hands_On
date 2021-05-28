@@ -1,3 +1,46 @@
+Scala Closures and anonymous function
+============================================
+An anonymous function is just a function that has no name while a closure is a function that captures the state of the surrounding environment
+
+Anonymous function ->
+var a = (x: Int) => x + 1
+
+A closure is a function, whose return value depends on the value of one or more variables declared outside this function.
+var factor = 3
+val multiplier = (i:Int) => i * factor
+
+
+Scala futures 
+==============================================
+Futures are the standard mechanism for writing multithreaded code in Scala. Whenever we create a new Future operation, 
+Scala spawns a new thread to run that Future's code, and after completion it executes any provided callbacks.
+
+A Future is a placeholder object for a value that may not yet exist. Generally, the value of the Future is supplied 
+concurrently and can subsequently be used. Composing concurrent tasks in this way tends to result in faster, asynchronous, 
+non-blocking parallel code
+
+
+scala partially applied function and currying
+===================================================
+currying : decomposition of functions with multiple arguments into a chain of single-argument functions.
+
+partial application of function : pass to a function fewer arguments than it has in its declaration. scala does not throw 
+an exception when you provide fewer arguments to the function, it simply applies them and returns a new function with rest of 
+arguments that need to be passed
+
+
+
+Scala singleton and companion objects
+=========================================
+Scala does not contain any concept of static keyword. Instead of static keyword Scala has singleton object. 
+A Singleton object is an object which defines a single object of a class.
+
+Companion object is known as an object whose name is same as the name of the class. Or In other words, when an 
+object and a class have the same name, then that object is known as the companion object and the class is known
+as companion class. A companion object is defined in the same source file in which the class is defined. 
+A companion object is allowed to access both private methods and private fields of the class. 
+
+
 Scala Constructors
 ======================================
 Constructors are used to initializing the object’s state, it has a set of statments that are executed when an object 
@@ -233,6 +276,9 @@ scala> assert(a==b)
 
 TYPE aliasing
 ============================
+using "type" you can tell that the variable of type is still unknown and will be dynamically implemented/given
+says that this type that is going to be used, is unknown yet, and depending on the concrete subclass, it will be defined.
+
 trait base{
 type T
 def method : T
@@ -315,7 +361,6 @@ scala> objYour.Name
 
 'final' keyword in scala
 ==================================================
-
 You can't override final variables in subclass
 
 scala> class Vehicle{
