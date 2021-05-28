@@ -1,8 +1,45 @@
+Scala Constructors
+======================================
+Constructors are used to initializing the object’s state, it has a set of statments that are executed when an object 
+is created.
+-- Primary constructor
+
+-- Auxiliary constructor
+uses "this" keyword 
+a single class can have multiple auxiliary constructors.
+
+
+Traits, interfaces and Abstract classes
+===========================================
+Traits can be seen as interfaces in other languages. 
+-- They however allow the developers to implement all or some of their methods that is trait is a combination of abstract and non-abstract methods.
+-- Whenever there is some code in traits, it is called mixins.
+-- but unlike interfaces, a trait can have partially implemented methods.
+-- Unlike interface, traits can inherit a class,another trait or an abstract class. Interfaces can only inherit another interface.
+-- Traits support multiple inheritance.
+
+
+-- Traits differ from abstract class on the fact that traits supports multiple inheritance which abstract class doesnt.
+-- traits might not have construct parameters but abstract class can have. 
+
+
 Traits and Mixins
 =======================
-Traits can be seen as interfaces in other languages. They however allow the developers 
-to implement all or some of their methods. Whenever there is some code in traits, it is
-called mixins.
+Traits can be seen as interfaces in other languages. 
+
+-- They however allow the developers to implement all or some of their methods that is trait is a combination of abstract and non-abstract methods.
+-- Scala traits cannot be instantiated and have no arguments or parameters.
+
+-- Mixin is the fact that you are extending multiple types of claases with right order and manner.
+remember that only a trait can be extended multiple times, abstract and normal classes can only be extended once.
+mixin is inheriting more than one trait and inheriting either a class/abstract class
+
+A,B -> abstract classes
+test1, test2, test3 -> traits
+real1, real2, real3 -> normal classes
+
+class prac1 extends real1 with A => error
+
 
 
 Trait as Classes
@@ -25,7 +62,7 @@ instantiate the trait.
 
 SELF/ this 
 ----------------
-this make sure if youre extending a trait which in turn extends another trait, while 
+"this" make sure if youre extending a trait which in turn extends another trait, while 
 extending that trait we need to extend the other trait as well with "key" keyword
 
 scala> trait Notifier{
