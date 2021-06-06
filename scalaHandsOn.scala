@@ -94,6 +94,12 @@ object and a class have the same name, then that object is known as the companio
 as companion class. A companion object is defined in the same source file in which the class is defined. 
 A companion object is allowed to access both private methods and private fields of the class. 
 
+-- The method in the singleton object is globally accessible.
+-- You are not allowed to create an instance of singleton object.
+-- You are not allowed to pass parameter in the primary constructor of singleton object.
+-- In Scala, a singleton object can extend class and traits.
+-- In Scala, a main method is always present in singleton object.
+
 
 Scala Constructors
 ======================================
@@ -137,6 +143,15 @@ real1, real2, real3 -> normal classes
 
 class prac1 extends real1 with A => error
 
+
+Mixins
+---------------------------
+When we are inheriting one or multiple traits along with one class/abstract class, it is called mixins.
+In mixin the order of extend matters or it will throw an error.
+
+-- If we extend a trait first and then the abstract class then the compiler will throw an error
+-- we need to extend any class or abstract class first and then extend any trait by using a keyword with
+-- trait can even be extended while creating object
 
 
 Trait as Classes
@@ -633,5 +648,14 @@ x: scala.collection.immutable.Set[Int] = Set(1, 2, 3)
 
 scala> 2 in x
 res0: Boolean = true
+
 ====================================================
+Implicit in Scala
+Implicit parameters are the parameters that are passed to a function with implicit keyword in Scala, which means the values 
+will be taken from the context in which they are called. In simpler terms, if no value or parameter is passed to a method or 
+function, then the compiler will look for implicit value and pass it further as the parameter. For example, changing an integer 
+variable to a string variable can be done by a Scala compiler rather than calling it explicitly. When implicit keyword used in 
+the parameter scope of the function, all the parameters are marked as implicit.
+Note: A method can only contain one implicit keyword.
+
 
