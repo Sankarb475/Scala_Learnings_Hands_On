@@ -1,3 +1,51 @@
+Difference between Scala and Python 
+============================================
+-- dynamically-typed languages perform type checking at runtime, while statically typed languages perform type checking at compile time.
+Python is dynamically typed and scala is statically typed.
+
+-- python is platform independent.
+
+-- The data types are decided during runtime for Python, not in scala.
+
+-- Python doesnt support proper multithreadding, scala does.
+
+-- python is easy, huge community support, less code volume, and english like syntax.
+Issue with Python - 
+// Python example
+number = 5
+numbr = (number + 15) / 2  // note the typo
+
+-- sicnce we had a typo numbr, python will create another variable by that name.
+
+-- Scala is almost 10 times faster than Python, because 
+
+
+Interpreted language
+===================================================
+Compilation involves translating your human understandable code to machine understandable code, or Machine Code. Machine code is the base 
+level form of instructions that can be directly executed by the CPU. Upon successful compilation, your code generates an executable file. 
+Executing this file runs the operations in your code step by step.
+
+Instead of translating source code to machine code like C++, Python code it translated to bytecode. This bytecode is a low-level set of 
+instructions that can be executed by an interpreter. In most PCs, Python interpreter is installed at /usr/local/bin/python3.8. Instead of 
+executing the instructions on CPU, bytecode instructions are executed on a Virtual Machine.
+
+-- One popular advantage of interpreted languages is that they are platform-independent. As long as the Python bytecode and the Virtual Machine 
+have the same version, Python bytecode can be executed on any platform (Windows, MacOS, etc).
+
+-- Dynamic typing provides a lot of freedom, but simultaneously it makes your code risky and sometimes difficult to debug.
+
+-- the reason for Python being slow is because the interpreter has to do extra work to have the bytecode instruction translated into a 
+form that can be executed on the machine.
+
+
+Garbage collection
+------------------------------------------
+python garbage collection can be handled with the module "gc".
+In Scala/Java - GC is handled by the JVM itself, and the timing of the same cant be defined.
+
+
+
 Scala Closures and anonymous function
 ============================================
 An anonymous function is just a function that has no name while a closure is a function that captures the state of the surrounding environment
@@ -6,6 +54,12 @@ Anonymous function ->
 var a = (x: Int) => x + 1
 
 A closure is a function, whose return value depends on the value of one or more variables declared outside this function.
+Scala Closures are functions which uses one or more free variables and the return value of this function is dependent of these variable. 
+The free variables are defined outside of the Closure Function and is not included as a parameter of this function. So the difference 
+between a closure function and a normal function is the free variable. A free variable is any kind of variable which is not defined 
+within the function and not passed as the parameter of the function. A free variable is not bound to a function with a valid value. 
+The function does not contain any values for the free variable.
+
 var factor = 3
 val multiplier = (i:Int) => i * factor
 
