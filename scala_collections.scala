@@ -251,6 +251,39 @@ It doesnt necessarily mean they'll ever both be running at the same instant. For
 Parallelism is when tasks literally run at the same time, e.g., on a multicore processor.
 
 
+Scala 
+=================================================
+Scala Hashmap
+-----------------
+import scala.collection.mutable.HashMap
+
+-- It is a key value pair storage
+
+
+
+Annotation
+-----------------
+Scala Annotations are metadata added to the program source code. Annotations are allowed on any kind of definition or 
+declaration including vals, vars, classes, objects, traits, defs and types. 
+Annotations are used to associate meta-information with definitions.
+
+
+Tail Recursion
+----------------------------
+-- The tail recursive functions better than non tail recursive functions because tail-recursion can be optimized by compiler. 
+A recursive function is said to be tail recursive if the recursive call is the last thing done by the function. There is no 
+need to keep record of the previous state.
+-- Tail-recursion can keep memory requirements constant.
+
+import scala.annotation.tailrec 
+
+
+
+
+
+
+
+
 
 
 
